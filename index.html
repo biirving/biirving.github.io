@@ -4,19 +4,21 @@
     <title>Ben Irving</title>
     <style>
       title {
-        font-family: Arial, sans-serif
+        font-family: Arial, sans-serif;
       }
       p {
         font-family: Arial, sans-serif;
       }
-      h1 {
-        font-family:Arial, Helvetica, sans-serif
-      }
-      h2 {
-        font-family:Arial, Helvetica, sans-serif
+      h1, h2 {
+        font-family: Arial, Helvetica, sans-serif;
       }
       ul {
         font-family: Arial, Helvetica, sans-serif;
+      }
+      /* New style for the larger, bold heading */
+      .large-bold-h2 {
+        font-size: 24px; /* You can adjust this value as needed */
+        font-weight: bold;
       }
     </style>
   </head>
@@ -27,21 +29,23 @@
     <h2>Projects</h2>
     <p>Here are some projects I have done, and some I am still working on:</p>
     <ul>
-      <h2>Equivariant Proximal Policy Optimization With Behavioral Cloning</h2>
+      <!-- Apply the new style class here -->
+      <h2 class="large-bold-h2">Equivariant Proximal Policy Optimization With Behavioral Cloning</h2>
       <p>
         Equivariance has been shown to increase sample efficiency in many different reinforcement learning algorithms. 
         These models are particularly relevant for classic control and robotic manipulation learning problems,
         where state spaces can be thought of as symmetric under rotation. This paper builds on previous work,
         examining the model architecture for equivariant actor-critic methods, and how symmetry can burnish the 
-        Proximal Policy Optimization (PPO) algorithm. The code is avilable at <a href="https://github.com/biirving/aur_ppo" target="_blank">AUR_PPO GitHub Repository</a>
+        Proximal Policy Optimization (PPO) algorithm. The code is available at <a href="https://github.com/biirving/aur_ppo" target="_blank">AUR_PPO GitHub Repository</a>
       </p>
       <img src="robot_arm" alt="A snippet of the environment">
     </ul>
     <ul>
-      <li>Multimodal encoding antecedant information.</li>
+      <li>Multimodal encoding antecedent information.</li>
     </ul>
-  </body>
 
-  <!-- Add this link to your "Essays" page -->
+    <!-- Add this link to your "Essays" page -->
     <a href="essays.html">Essays and Stories</a>
+  </body>
 </html>
+
