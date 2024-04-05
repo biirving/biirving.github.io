@@ -15,10 +15,19 @@
       ul {
         font-family: Arial, Helvetica, sans-serif;
       }
-      /* New style for the larger, bold heading */
       .large-bold-h2 {
-        font-size: 24px; /* You can adjust this value as needed */
+        font-size: 24px;
         font-weight: bold;
+      }
+      .citation {
+        font-style: italic;
+        margin-top: 10px;
+      }
+      .citation-link {
+        display: block;
+        margin-top: 5px;
+        text-decoration: none;
+        color: blue;
       }
     </style>
   </head>
@@ -29,7 +38,6 @@
     <h2>Projects</h2>
     <p>Here are some projects I have done, and some I am still working on:</p>
     <ul>
-      <!-- Apply the new style class here -->
       <h2 class="large-bold-h2">Equivariant Proximal Policy Optimization With Behavioral Cloning</h2>
       <p>
         Equivariance has been shown to increase sample efficiency in many different reinforcement learning algorithms. 
@@ -41,9 +49,27 @@
       <img src="robot_arm" alt="A snippet of the environment">
     </ul>
     <ul>
-      <li>Multimodal encoding antecedent information.</li>
+      <h2 class="large-bold-h2">"Better Together", Large Graph Embeddings with Scalable representation Learning</h2>
+      <p>
+        Last summer, I worked on Ken Church's team at the JSALT Speech and NLP workshop hosted by Johns Hopkins. Our overall aim was to build
+        an academic search engine for papers and authors in Semantic Scholar (S2).
+        My focus was on large-scale graph embeddings, implementing and refining traditional linear algebra methods
+        and graph neural networks to produce embedding files on CPU and GPU. I focused on the PRONe algorithm, 
+        <div class="citation">
+          Jie Zhang, Yuxiao Dong, Yan Wang, Jie Tang, Ming Ding. <cite>ProNE: Fast and Scalable Network Representation Learning.</cite> 
+          In: Proceedings of the Twenty-Eighth International Joint Conference on Artificial Intelligence, IJCAI-19, pages 4278–4284, July 2019.
+          Publisher: International Joint Conferences on Artificial Intelligence Organization. DOI:
+          <a href="https://doi.org/10.24963/ijcai.2019/594" class="citation-link" target="_blank">10.24963/ijcai.2019/594</a>
+        </div>, which utilizes spectral clustering, Chebyshev iterations and fourier transforms to produce embeddings.
+        I worked in python and C, toying with the low-level linear algebra libraries to optimize compute efficiency on our limited hardware. 
+        The demo is available at <a href="http://34.204.188.58//similar.html" target="_blank">Better Together Demo</a>, and the code is here 
+        <a href="https://github.com/kwchurch/JSALT_Better_Together" target="_blank">Better Together Repository</a>.
+      </p>
     </ul>
-
+  </body>
+</html>
+      <li>WIP: Multimodal encoding antecedent information.</li>
+    </ul>
     <!-- Add this link to your "Essays" page -->
     <a href="essays.html">Essays and Stories</a>
   </body>
