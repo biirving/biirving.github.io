@@ -1,73 +1,226 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Ben Irving</title>
-  <style>
-    title {
-      font-family: Arial, sans-serif;
-    }
-    p {
-      font-family: Arial, sans-serif;
-    }
-    h1, h2 {
-      font-family: Arial, Helvetica, sans-serif;
-    }
-    ul {
-      font-family: Arial, Helvetica, sans-serif;
-    }
-    .large-bold-h2 {
-      font-size: 24px;
-      font-weight: bold;
-    }
-    .citation {
-      font-style: italic;
-      margin-top: 10px;
-    }
-    .citation-link {
-      display: block;
-      margin-top: 5px;
-      text-decoration: none;
-      color: blue;
-    }
-    /* New CSS class for the smaller image */
-    .smaller-image {
-      width: 800px; /* Set the width as desired */
-      height: auto; /* Maintain the aspect ratio */
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ben Irving</title>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --text-color: #374151;
+            --background-color: #f9fafb;
+            --card-background: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav {
+            background-color: var(--card-background);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            padding: 1rem 0;
+            margin-bottom: 2rem;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links a {
+            margin-left: 1.5rem;
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #111827;
+            margin-bottom: 1rem;
+        }
+
+        .intro {
+            font-size: 1.25rem;
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #111827;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-card {
+            background-color: var(--card-background);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .project-card h3 {
+            font-size: 1.5rem;
+            color: #111827;
+            margin-bottom: 1rem;
+        }
+
+        .project-card p {
+            margin-bottom: 1.5rem;
+        }
+
+        .project-links {
+            margin-top: 1rem;
+        }
+
+        .project-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+            margin-right: 1rem;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .project-links a:hover {
+            text-decoration: underline;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            margin-top: 1.5rem;
+        }
+
+        .github-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .project-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  
-  <h1>Ben Irving</h1>
-  <p>My name is Ben, and I am currently a computer science student at Northeastern University interested in generative models.</p>
-  <h2>Projects</h2>
-  <p>Here are some projects I have done, and some I am still working on:</p>
-  <ul>
-    <h2 class="large-bold-h2">Equivariant Proximal Policy Optimization With Behavioral Cloning</h2>
-    <p>
-      Equivariance has been shown to increase sample efficiency in many different reinforcement learning algorithms. 
-      These models are particularly relevant for classic control and robotic manipulation learning problems,
-      where state spaces can be thought of as symmetric under rotation. My project builds on previous work,
-      examining the model architecture for equivariant actor-critic methods, and how symmetry can burnish the 
-      Proximal Policy Optimization (PPO) algorithm. The code is available at <a href="https://github.com/biirving/aur_ppo" target="_blank">AUR_PPO GitHub Repository</a>
-    </p>
-    <img src="robot_arm" alt="A snippet of the environment">
-  </ul>
-  <ul>
-    <h2 class="large-bold-h2">"Better Together", Large Graph Embeddings with Scalable representation Learning</h2>
-    <p>
-      Last summer, I worked on Ken Church's team at the JSALT Speech and NLP workshop hosted by Johns Hopkins. Our overall aim was to build
-      an academic search engine for papers and authors in Semantic Scholar (S2).
-      My focus was on large-scale graph embeddings, implementing and refining traditional linear algebra methods
-      and graph neural networks to produce embedding files on CPU and GPU. I focused on the PRONe algorithm (Zhang et al., 2019), which utilizes spectral clustering, Chebyshev iterations and Fourier transforms to produce embeddings.
-      I worked in python and C, toying with the low-level linear algebra libraries to optimize compute efficiency on our limited hardware. 
-      The demo is available at <a href="http://34.204.188.58//similar.html" target="_blank">Better Together Demo</a>, and the code is here 
-      <a href="https://github.com/kwchurch/JSALT_Better_Together" target="_blank">Better Together Repository</a>.
-      <img src="better_together" alt="Here is our search engine computing related works for Attention is All You Need (Vaswani et al., 2017)" class="smaller-image">
-    </p>
-  </ul>
-  <li>WIP: Multimodal encoding antecedent information.</li>
-  <!-- Add this link to your "Essays" page -->
-  <a href="essays.html">Essays and Stories</a>
+    <nav>
+        <div class="container nav-content">
+            <h1>Ben Irving</h1>
+            <div class="nav-links">
+                <a href="#projects">Projects</a>
+                <a href="essays.html">Essays</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <p class="intro">
+            My name is Ben, and I am currently a computer science student at Northeastern University interested in generative models.
+        </p>
+
+        <section id="projects">
+            <h2>Projects</h2>
+
+            <div class="project-card">
+                <h3>Equivariant Proximal Policy Optimization With Behavioral Cloning</h3>
+                <p>
+                    Equivariance has been shown to increase sample efficiency in many different reinforcement learning algorithms. 
+                    These models are particularly relevant for classic control and robotic manipulation learning problems,
+                    where state spaces can be thought of as symmetric under rotation. My project builds on previous work,
+                    examining the model architecture for equivariant actor-critic methods, and how symmetry can burnish the 
+                    Proximal Policy Optimization (PPO) algorithm.
+                </p>
+                <div class="project-links">
+                    <a href="https://github.com/biirving/aur_ppo" target="_blank">
+                        <svg class="github-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        View on GitHub
+                    </a>
+                </div>
+                <img src="robot_arm" alt="A snippet of the environment">
+            </div>
+
+            <div class="project-card">
+                <h3>"Better Together", Large Graph Embeddings with Scalable representation Learning</h3>
+                <p>
+                    Last summer, I worked on Ken Church's team at the JSALT Speech and NLP workshop hosted by Johns Hopkins. Our overall aim was to build
+                    an academic search engine for papers and authors in Semantic Scholar (S2).
+                    My focus was on large-scale graph embeddings, implementing and refining traditional linear algebra methods
+                    and graph neural networks to produce embedding files on CPU and GPU. I focused on the PRONe algorithm (Zhang et al., 2019), which utilizes spectral clustering, Chebyshev iterations and Fourier transforms to produce embeddings.
+                    I worked in python and C, toying with the low-level linear algebra libraries to optimize compute efficiency on our limited hardware.
+                </p>
+                <div class="project-links">
+                    <a href="http://34.204.188.58//similar.html" target="_blank">View Demo</a>
+                    <a href="https://github.com/kwchurch/JSALT_Better_Together" target="_blank">
+                        <svg class="github-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        View on GitHub
+                    </a>
+                </div>
+                <img src="better_together" alt="Search engine computing related works for Attention is All You Need">
+            </div>
+
+            <div class="project-card">
+                <h3>Work in Progress</h3>
+                <p>Multimodal encoding antecedent information.</p>
+            </div>
+        </section>
+        <!-- New Publications Section -->
+        <section id="publications">
+            <h2>Publications</h2>
+            
+            <div class="publication-card">
+                <h3>MEANT: Multimodal Encoder for Antecedent Information</h3>
+                <p class="publication-authors">Benjamin Irving, Annika Marie Schoene</p>
+                <p class="publication-venue">EMNLP 2024</p>
+                <div class="publication-abstract">
+                    <p>
+                        We introduce MEANT, a multimodal model architecture with a novel, temporally focused self-attention mechanism. 
+                        The model effectively processes stock market data across multiple modalities - price information, social media text, 
+                        and graphical data. Our research demonstrates that MEANT improves performance on existing baselines by over 15%, 
+                        with textual information showing significantly more impact than visual information in time-dependent tasks.
+                    </p>
+                    <p>
+                        Additionally, we release TempStock, a new dataset containing 1.7M+ Tweets and price information from S&P 500 
+                        companies, specifically designed for sequential processing across varying lag periods.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
