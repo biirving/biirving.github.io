@@ -3,353 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ben Irving. PhD student at UC Santa Cruz.">
     <title>Ben Irving</title>
     <style>
-        :root {
-            --primary-color: #2563eb;
-            --text-color: #374151;
-            --background-color: #f9fafb;
-            --card-background: #ffffff;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { box-sizing: border-box; }
+        html { color-scheme: light; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--background-color);
+            margin: 0;
+            background: #fff;
+            color: #242424;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            font-size: 16px;
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
         }
-
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        nav {
-            background-color: var(--card-background);
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            padding: 1rem 0;
-            margin-bottom: 2rem;
-        }
-
-        .nav-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .nav-links a {
-            margin-left: 1.5rem;
-            color: var(--text-color);
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary-color);
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            color: #111827;
-            margin-bottom: 1rem;
-        }
-
-        .intro {
-            font-size: 1.25rem;
-            margin-bottom: 3rem;
-        }
-
-        h2 {
-            font-size: 2rem;
-            color: #111827;
-            margin-bottom: 1.5rem;
-        }
-
-        .project-card {
-            background-color: var(--card-background);
-            border-radius: 8px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-        }
-
-        .project-card h3 {
-            font-size: 1.5rem;
-            color: #111827;
-            margin-bottom: 1rem;
-        }
-
-        .project-card p {
-            margin-bottom: 1.5rem;
-        }
-
-        .project-links {
-            margin-top: 1rem;
-        }
-
-        .project-links a {
-            color: var(--primary-color);
-            text-decoration: none;
-            margin-right: 1rem;
-            display: inline-flex;
-            align-items: center;
-        }
-
-        .project-links a:hover {
-            text-decoration: underline;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 6px;
-            margin-top: 1.5rem;
-        }
-
-        .github-icon {
-            width: 20px;
-            height: 20px;
-            margin-right: 0.5rem;
-        }
-
-        .publication-card {
-            background-color: var(--card-background);
-            border-radius: 8px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-        }
-
-        .publication-card h3 {
-            font-size: 1.5rem;
-            color: #111827;
-            margin-bottom: 0.5rem;
-        }
-
-        .publication-authors {
-            font-style: italic;
-            margin-bottom: 0.5rem;
-        }
-
-        .publication-venue {
-            font-weight: bold;
-            margin-bottom: 1rem;
-        }
-
-        .publication-abstract {
-            margin-bottom: 1rem;
-        }
-
-        .publication-citation {
-            font-size: 0.9rem;
-            font-style: italic;
-        }
-
-        .contact-bubbles {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 3rem;
-            flex-wrap: wrap;
-        }
-
-        .contact-bubble {
-            display: inline-flex;
-            align-items: center;
-            padding: 0.5rem 1rem;
-            background-color: var(--card-background);
-            border: 2px solid var(--primary-color);
-            border-radius: 20px;
-            text-decoration: none;
-            color: var(--primary-color);
-            font-weight: 500;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 4px rgba(37, 99, 235, 0.1);
-        }
-
-        .contact-bubble:hover {
-            background-color: var(--primary-color);
-            color: white;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(37, 99, 235, 0.2);
-        }
-
-        .contact-bubble svg {
-            width: 16px;
-            height: 16px;
-            margin-right: 0.4rem;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 0 1rem;
-            }
-            
-            h1 {
-                font-size: 2rem;
-            }
-            
-            .project-card {
-                padding: 1.5rem;
-            }
+        main { max-width: 648px; margin: 0 auto; padding: 88px 24px 80px; }
+        h1 { margin: 0 0 20px; font-size: 26px; font-weight: 600; letter-spacing: -0.8px; line-height: 1.25; }
+        p { margin: 0; }
+        a { color: inherit; text-decoration-color: #bcbcbc; text-underline-offset: 4px; text-decoration-thickness: 1px; }
+        a:hover { text-decoration-color: currentColor; }
+        a:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
+        .intro { max-width: 480px; }
+        .intro p + p { margin-top: 4px; color: #686868; }
+        nav { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 22px; font-size: 14px; }
+        section { margin-top: 52px; }
+        h2 { margin: 0 0 23px; padding-bottom: 12px; border-bottom: 1px solid #e8e8e8; font-size: 14px; font-weight: 600; color: #242424; }
+        ul { list-style: none; margin: 0; padding: 0; }
+        li + li { margin-top: 25px; }
+        h3 { margin: 0; font-size: 16px; font-weight: 500; line-height: 1.5; }
+        .meta, .description { margin-top: 5px; font-size: 14px; color: #686868; line-height: 1.6; }
+        .links { display: flex; gap: 18px; margin-top: 7px; font-size: 14px; }
+        @media (max-width: 600px) {
+            main { padding-top: 48px; padding-bottom: 48px; }
+            section { margin-top: 40px; }
         }
     </style>
 </head>
 <body>
-    <nav>
-        <div class="container nav-content">
+    <main>
+        <header>
             <h1>Ben Irving</h1>
-            <div class="nav-links">
-                <a href="#projects">Projects</a>
-                <a href="#publications">Publications</a>
-                <a href="essays.html">Essays</a>
-                <a href="resume_website.pdf" target="_blank">Resume</a>
+            <div class="intro">
+                <p>I’m a PhD student at UC Santa Cruz.</p>
+                <p>I graduated from Northeastern in December 2024.</p>
             </div>
-        </div>
-    </nav>
+            <nav aria-label="Contact and profiles">
+                <a href="mailto:irving.b@northeastern.edu">Email</a>
+                <a href="https://www.linkedin.com/in/benjamin-irving">LinkedIn</a>
+                <a href="https://scholar.google.com/citations?user=mODHmWQAAAAJ&amp;hl=en">Google Scholar</a>
+                <a href="resume_website.pdf">Resume</a>
+            </nav>
+        </header>
 
-    <main class="container">
-        <p class="intro">
-            My name is Ben, currently building at <a href="https://www.vecml.com/" target="_blank" style="color: var(--primary-color); text-decoration: none; font-weight: 500;">Vecml</a>.
-        </p>
-
-        <p style="font-size: 1.1rem; margin-bottom: 2rem; color: var(--text-color);">
-            I graduated from Northeastern in December of 2024.
-        </p>
-
-        <div class="contact-bubbles">
-            <a href="mailto:irving.b@northeastern.edu" class="contact-bubble">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                </svg>
-                Email
-            </a>
-            <a href="https://www.linkedin.com/in/benjamin-irving" target="_blank" class="contact-bubble">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                </svg>
-                LinkedIn
-            </a>
-            <a href="https://scholar.google.com/citations?user=mODHmWQAAAAJ&hl=en" target="_blank" class="contact-bubble">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/>
-                </svg>
-                Google Scholar
-            </a>
-        </div>
-        <!-- Publications Section -->
-        <section id="publications">
-            <h2>Publications</h2>
-            
-            <div class="publication-card">
-                <h3>Automatically extracting social determinants of health for suicide: a narrative literature review</h3>
-                <p class="publication-authors">Annika M Schoene, Suzanne Garverich, Iman Ibrahim, Sia Shah, Benjamin Irving, Clifford C Dacso</p>
-                <p class="publication-venue">npj Mental Health Research, Volume 3, Issue 1, Pages 51 (2024)</p>
-                <p class="publication-venue">Nature Publishing Group UK</p>
-                <div class="publication-abstract">
-                    <p>
-                        Suicide is a complex phenomenon that is often not preceded by a diagnosed mental health condition, therefore making it difficult to study and mitigate. Artificial Intelligence has increasingly been used to better understand Social Determinants of Health factors that influence suicide outcomes. In this review we find that many studies use limited SDoH information and minority groups are often underrepresented, thereby omitting important factors that could influence risk of suicide.
-                    </p>
-                </div>
-            </div>
-            <div class="publication-card">
-                <h3>MEANT: Multimodal Encoder for Antecedent Information</h3>
-                <p class="publication-authors">Benjamin Irving, Annika Marie Schoene</p>
-                <p class="publication-venue">EMNLP 2024</p>
-                <div class="publication-abstract">
-                    <p>
-                        We introduce MEANT, a multimodal model architecture with a novel, temporally focused self-attention mechanism.
-                        The model effectively processes stock market data across multiple modalities - price information, social media text,
-                        and graphical data. Our research demonstrates that MEANT improves performance on existing baselines by over 15%,
-                        with textual information showing significantly more impact than visual information in time-dependent tasks.
-                    </p>
-                    <p>
-                        Additionally, we release TempStock, a new dataset containing 1.7M+ Tweets and price information from S&P 500
-                        companies, specifically designed for sequential processing across varying lag periods.
-                    </p>
-                </div>
-                <div class="project-links">
-                    <a href="https://docs.google.com/presentation/d/1GM8atfqZWDdHDThzGXW--4u2rL39AaFnNGbKYqAKHgw/edit?usp=sharing" target="_blank">View Slides</a>
-                </div>
-            </div>
-            <div class="publication-card">
-                <h3>Related Work is All you Need</h3>
-                <p class="publication-authors">Rodolfo Zevallos, John E. Ortega, Benjamin Irving</p>
-                <p class="publication-venue">LREC-COLING 2024</p>
-                <div class="publication-abstract">
-                    <p>
-                        In modern times, generational artificial intelligence is used in several industries and by many people. One use 
-                        case that can be considered important but somewhat redundant is the act of searching for related work and other 
-                        references to cite. As an avenue to better ascertain the value of citations and their corresponding locations, we 
-                        focus on the common "related work" section as a focus of experimentation with the overall objective to generate 
-                        the section.
-                    </p>
-                    <p>
-                        In this article, we present a corpus with 400k annotations that distinguish related work from the rest of the 
-                        references. Additionally, we show that for the papers in our experiments, the related work section represents the 
-                        paper just as well, and in many cases, better than the rest of the references. We show that this is the case for 
-                        more than 74% of the articles when using cosine similarity to measure the distance between two common graph neural 
-                        network algorithms: Prone and Specter.
-                    </p>
-                </div>
-                <p class="publication-citation">
-                    Published in: Proceedings of the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (LREC-COLING 2024), pages 13874-13878, 20-25 May, 2024, Torino, Italia.
-                </p>
-            </div>
+        <section id="publications" aria-labelledby="publications-heading">
+            <h2 id="publications-heading">Publications</h2>
+            <ul>
+                <li>
+                    <h3>Automatically extracting social determinants of health for suicide: a narrative literature review</h3>
+                    <p class="meta">Annika M Schoene, Suzanne Garverich, Iman Ibrahim, Sia Shah, Benjamin Irving, Clifford C Dacso</p>
+                    <p class="meta">npj Mental Health Research · 2024</p>
+                </li>
+                <li>
+                    <h3>MEANT: Multimodal Encoder for Antecedent Information</h3>
+                    <p class="meta">Benjamin Irving, Annika Marie Schoene</p>
+                    <p class="meta">EMNLP · 2024</p>
+                    <p class="links"><a href="https://docs.google.com/presentation/d/1GM8atfqZWDdHDThzGXW--4u2rL39AaFnNGbKYqAKHgw/edit?usp=sharing">Slides</a></p>
+                </li>
+                <li>
+                    <h3>Related Work is All you Need</h3>
+                    <p class="meta">Rodolfo Zevallos, John E. Ortega, Benjamin Irving</p>
+                    <p class="meta">LREC-COLING · 2024</p>
+                </li>
+            </ul>
         </section>
 
-        <section id="projects">
-            <h2>Projects</h2>
-
-            <div class="project-card">
-                <h3>Equivariant Proximal Policy Optimization With Behavioral Cloning</h3>
-                <p>
-                    Equivariance has been shown to increase sample efficiency in many different reinforcement learning algorithms. 
-                    These models are particularly relevant for classic control and robotic manipulation learning problems,
-                    where state spaces can be thought of as symmetric under rotation. My project builds on previous work,
-                    examining the model architecture for equivariant actor-critic methods, and how symmetry can burnish the 
-                    Proximal Policy Optimization (PPO) algorithm.
-                </p>
-                <div class="project-links">
-                    <a href="https://github.com/biirving/aur_ppo" target="_blank">
-                        <svg class="github-icon" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                        </svg>
-                        View on GitHub
-                    </a>
-                </div>
-                <img src="robot_arm" alt="A snippet of the environment">
-            </div>
-
-            <div class="project-card">
-                <h3>"Better Together", Large Graph Embeddings with Scalable representation Learning</h3>
-                <p>
-                    Last summer, I worked on Ken Church's team at the JSALT Speech and NLP workshop hosted by Johns Hopkins. Our overall aim was to build
-                    an academic search engine for papers and authors in Semantic Scholar (S2).
-                    My focus was on large-scale graph embeddings, implementing and refining traditional linear algebra methods
-                    and graph neural networks to produce embedding files on CPU and GPU. I focused on the PRONe algorithm (Zhang et al., 2019), which utilizes spectral clustering, Chebyshev iterations and Fourier transforms to produce embeddings.
-                    I worked in python and C, toying with the low-level linear algebra libraries to optimize compute efficiency on our limited hardware.
-                </p>
-                <div class="project-links">
-                    <a href="http://34.204.188.58//similar.html" target="_blank">View Demo</a>
-                    <a href="https://github.com/kwchurch/JSALT_Better_Together" target="_blank">
-                        <svg class="github-icon" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                        </svg>
-                        View on GitHub
-                    </a>
-                </div>
-                <img src="better_together" alt="Search engine computing related works for Attention is All You Need">
-            </div>
+        <section id="projects" aria-labelledby="projects-heading">
+            <h2 id="projects-heading">Projects</h2>
+            <ul>
+                <li>
+                    <h3><a href="https://github.com/biirving/aur_ppo">Equivariant Proximal Policy Optimization</a></h3>
+                    <p class="description">Exploring symmetry and behavioral cloning for more efficient robotic manipulation.</p>
+                </li>
+                <li>
+                    <h3><a href="https://github.com/kwchurch/JSALT_Better_Together">Better Together</a></h3>
+                    <p class="description">Large-scale graph embeddings for academic search. Built with Ken Church’s team at the Johns Hopkins JSALT workshop.</p>
+                </li>
+            </ul>
         </section>
-        
     </main>
 </body>
 </html>
